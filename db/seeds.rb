@@ -161,11 +161,11 @@ MOVIE_API_KEY = ENV['movie_api_key']
 Genre.destroy_all
 Movie.destroy_all
 
-Array(1..100).each do |number|
-    movies = JSON.parse(HTTParty.get("https://api.themoviedb.org/3/movie/popular?api_key=MOVIE_API_KEY&language=en-US&page=#{number}").body)
+Array(1..25).each do |number|
+    movies = JSON.parse(HTTParty.get("https://api.themoviedb.org/3/movie/popular?api_key=#{MOVIE_API_KEY}&language=en-US&page=#{number}").body)
     array_of_movies = movies["results"]
     array_of_movies.each do |movie_hash|
-        movie_response = HTTParty.get("https://api.themoviedb.org/3/movie/#{movie_hash["id"]}?api_key=MOVIE_API_KEY&language=en-US")
+        movie_response = HTTParty.get("https://api.themoviedb.org/3/movie/#{movie_hash["id"]}?api_key=#{MOVIE_API_KEY}&language=en-US")
         singular_movie = JSON.parse(movie_response.body)
         if movie_response.code != 404 && singular_movie["genres"].first && singular_movie["poster_path"] && singular_movie["runtime"] && singular_movie["vote_average"]
             Movie.create({
@@ -175,6 +175,7 @@ Array(1..100).each do |number|
                 length: singular_movie["runtime"].to_s + " minutes",
                 overview: singular_movie["overview"], 
                 rating: singular_movie["vote_average"].to_s,
+                likes: 0,
                 genre: Genre.find_or_create_by(description: singular_movie["genres"].first["name"])
             })
             puts "seeded #{singular_movie["title"]}"

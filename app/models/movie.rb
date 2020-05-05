@@ -5,4 +5,5 @@ class Movie < ApplicationRecord
     def genre_description
        genre["description"] 
     end
+    
 end

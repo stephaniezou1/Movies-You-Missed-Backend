@@ -22,13 +22,13 @@ class CommentsController < ApplicationController
     end
 
     def update
-        toy = Toy.find(params[:id])
+        comment = Comment.find(params[:id])
         comment.update(comment_params)
         render json: comment
     end
 
     def destroy  
-        comment = comment.find(params[:id])
+        comment = Comment.find(params[:id])
         comment.destroy
         render json: comment
     end
@@ -40,7 +40,7 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-        params.require(:comment).permit(:content, :movie_id)
+        params.require(:comment).permit(:content, :author, :movie_id)
       end
 
 end

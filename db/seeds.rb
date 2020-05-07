@@ -161,7 +161,8 @@ MOVIE_API_KEY = ENV['movie_api_key']
 Genre.destroy_all
 Movie.destroy_all
 
-Array(1..25).each do |number|
+
+Array(1..75).each do |number|
     movies = JSON.parse(HTTParty.get("https://api.themoviedb.org/3/movie/popular?api_key=#{MOVIE_API_KEY}&language=en-US&page=#{number}").body)
     array_of_movies = movies["results"]
     array_of_movies.each do |movie_hash|
@@ -175,12 +176,20 @@ Array(1..25).each do |number|
                 length: singular_movie["runtime"].to_s + " minutes",
                 overview: singular_movie["overview"], 
                 rating: singular_movie["vote_average"].to_s,
-                likes: 0,
+                likes: rand(1..90),
                 genre: Genre.find_or_create_by(description: singular_movie["genres"].first["name"])
             })
             puts "seeded #{singular_movie["title"]}"
         end
     end
+end
+
+comment1 = Comment.create(content: "Best movie I've ever seen", movie_id: 16, author: "Stephanie")
+comment2 = Comment.create(content: "Really intense movie that has a fantastic long-shot style, would highly recommend.", movie_id: 17, author: "Stephanie")
+comment3 = Comment.create(content: "Great new Netflix movie starring Asian American roles!!", movie_id: 15, author: "Stephanie")
+
+Array(1..100).each do |number|
+    Comment.create(content: "Highly recommend this movie", movie_id: number, author: "Stephanie")
 end
 0;
 

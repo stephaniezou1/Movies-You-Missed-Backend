@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
     
     def index
-        movies = Movie.limit(40)
+        movies = Movie.limit(50)
         render json: movies
     end
 

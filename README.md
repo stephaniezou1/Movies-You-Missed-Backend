@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Getting Started
+For development, you will only need Ruby on Rails and Postgres, which depends on Homebrew and Ruby.
 
-Things you may want to cover:
+Node installation on OS X
+You will need to use a Terminal. On OS X, you can find the default terminal in /Applications/Utilities/Terminal.app.
 
-* Ruby version
+Install Homebrew:
 
-* System dependencies
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+Install Ruby:
 
-* Configuration
+    $ brew install rbenv ruby-build
+    # Add rbenv to bash so that it loads every time you open a terminal
+    $ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+    $ source ~/.bash_profile
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    # Install Ruby
+    $ rbenv install 2.7.1
+    $ rbenv global 2.7.1
+    $ ruby -v
+Install Rails
+    $ gem install rails -v 6.0.2.2
+Install PostgreSQL
+    $ brew install postgresql

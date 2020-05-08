@@ -1,24 +1,56 @@
-# README
+# Movie List: What You Missed Web Application (backend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Languages and Tools
 
-Things you may want to cover:
+* [Ruby on Rails](https://rubyonrails.org/)
+* [PostgreSQL](https://www.postgresql.org/) - Database
+* [The Movie Database](https://www.themoviedb.org/) - External API
+* [Active Record](https://guides.rubyonrails.org/active_record_basics.html) - Object Relational Mapping system
+* [Active Model Serializers](https://github.com/rails-api/active_model_serializers) - Serialization
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To get started, you will only need Ruby on Rails and Postgres. To do so, you must have Homebrew and Ruby installed first.
 
-* Configuration
+### Node installation on OS X
 
-* Database creation
+In your terminal...
 
-* Database initialization
+1. Install [Homebrew](https://brew.sh/)
 
-* How to run the test suite
+    ```$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"```
+  
+2. Install [Ruby](https://www.ruby-lang.org/en/)
+    
+    ```$ brew install ruby```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Install [Rails](https://rubyonrails.org/)
 
-* Deployment instructions
+    ```$ gem install rails```
 
-* ...
+4. Install [PostgreSQL](https://www.postgresql.org/)
+
+    ```$ brew install postgresql```
+
+
+## Installation
+
+1. Clone the repo and cd into the folder
+2. Bundle Install
+
+    ```$ bundle install```
+    
+3. Create migrations, migrate and seed:
+
+    ```$ rails db:create
+       $ rails db:migrate
+       $ rails db:seed```
+       
+       
+## Launch The Server
+
+1. Last step, launch the rails server!
+    ```$ rails s```
+    
+    ### Start developing!
+

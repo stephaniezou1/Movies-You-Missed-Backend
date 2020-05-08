@@ -29,9 +29,9 @@ In your terminal...
 2. Bundle Install
     ```$ bundle install```
 3. Create migrations, migrate and seed:
-    ```$ rails db:create
+    ``` $ rails db:create
        $ rails db:migrate
-       $ rails db:seed```
+       $ rails db:seed ```
        
 ## Launch The Server
 

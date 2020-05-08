@@ -1,12 +1,12 @@
-# Movie List: What You Missed (backend)
+# Movie List: What You Missed Web Application (backend)
 
 ## Languages and Tools
 
 * [Ruby on Rails](https://rubyonrails.org/)
-* [PostgreSQL](https://www.postgresql.org/) - database
-* [The Movie Database](https://www.themoviedb.org/) - external API
+* [PostgreSQL](https://www.postgresql.org/) - Database
+* [The Movie Database](https://www.themoviedb.org/) - External API
 * [Active Record](https://guides.rubyonrails.org/active_record_basics.html) - Object Relational Mapping system
-* [Active Model Serializers](https://github.com/rails-api/active_model_serializers) - serialization
+* [Active Model Serializers](https://github.com/rails-api/active_model_serializers) - Serialization
 
 ## Getting Started
 
@@ -52,5 +52,5 @@ In your terminal...
 1. Last step, launch the rails server!
     ```$ rails s```
     
-    Enjoy!
+    ### Start developing!
 

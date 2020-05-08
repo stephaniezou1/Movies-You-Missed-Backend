@@ -184,12 +184,25 @@ Array(1..75).each do |number|
     end
 end
 
-comment1 = Comment.create(content: "Best movie I've ever seen", movie_id: 16, author: "Stephanie")
-comment2 = Comment.create(content: "Really intense movie that has a fantastic long-shot style, would highly recommend.", movie_id: 17, author: "Stephanie")
-comment3 = Comment.create(content: "Great new Netflix movie starring Asian American roles!!", movie_id: 15, author: "Stephanie")
-
-Array(1..100).each do |number|
-    Comment.create(content: "Highly recommend this movie", movie_id: number, author: "Stephanie")
+Array(1..50).each do |number|
+    Comment.create(content: "Highly recommend this movie!!", movie_id: number, author: "Stephanie")
 end
+
+Array(51..100).each do |number|
+    Comment.create(content: "Best movie I've ever seen", movie_id: 16, author: "Naomi")
+end
+
+Array(101..150).each do |number|
+    Comment.create(content: "Did not love it honestly, but okay for a chill night", movie_id: 16, author: "Tiffany")
+end
+
+Array(1..50).each do |number|
+    Comment.create(content: "Was ok, watched it for the director's style but don't think it was their best work!", movie_id: 16, author: "Mina")
+end
+
+Array(20..80).each do |number|
+    Comment.create(content: "Can I see more diversity? And more female roles please? Ones that don't revolve around a male's??", movie_id: 16, author: "Michelle")
+end
+
 0;
 

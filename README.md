@@ -6,9 +6,11 @@ To get started, you will only need Ruby on Rails and Postgres, which depends on 
 
 In your terminal...
 
-1. Install Homebrew
+1. Install [Homebrew](https://brew.sh/)
 
-```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+  ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+  
+2. Install Ruby
 
 ## Getting Started
 

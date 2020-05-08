@@ -24,3 +24,7 @@ Install Rails
     $ gem install rails -v 6.0.2.2
 Install PostgreSQL
     $ brew install postgresql
+Install Rails
+    $ gem install rails -v 6.0.2.2
+Install PostgreSQL
+    $ brew install postgresql

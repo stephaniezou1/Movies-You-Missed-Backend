@@ -2,11 +2,11 @@
 
 ## Languages and Tools
 
-[Ruby on Rails](https://rubyonrails.org/)
-[PostgreSQL](https://www.postgresql.org/) - database
-[The Movie Database](https://www.themoviedb.org/) - external API
-[Active Record](https://guides.rubyonrails.org/active_record_basics.html) - Object Relational Mapping system
-[Active Model Serializers](https://github.com/rails-api/active_model_serializers) - serialization
+* [Ruby on Rails](https://rubyonrails.org/)
+* [PostgreSQL](https://www.postgresql.org/) - database
+* [The Movie Database](https://www.themoviedb.org/) - external API
+* [Active Record](https://guides.rubyonrails.org/active_record_basics.html) - Object Relational Mapping system
+* [Active Model Serializers](https://github.com/rails-api/active_model_serializers) - serialization
 
 ## Getting Started
 
